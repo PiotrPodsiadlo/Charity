@@ -11,7 +11,6 @@ public class HomeController {
 
 
     @RequestMapping("/")
-    @ResponseBody
     public String homeAction(Model model){
         return "index";
     }
