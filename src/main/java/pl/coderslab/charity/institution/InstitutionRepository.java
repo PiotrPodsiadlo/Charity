@@ -1,4 +1,8 @@
 package pl.coderslab.charity.institution;
 
-public class InstitutionRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InstitutionRepository extends JpaRepository<Institution, Long> {
+
+
 }

@@ -4,10 +4,7 @@ import lombok.Data;
 import pl.coderslab.charity.category.Category;
 import pl.coderslab.charity.institution.Institution;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -21,7 +18,9 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int quantity;
+    @ManyToMany
     private List<Category> categories;
+    @ManyToOne
     private Institution institution;
     private String street;
     private String city;
