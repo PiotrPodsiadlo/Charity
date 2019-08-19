@@ -67,10 +67,24 @@
     <div class="form--steps-container">
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
-        <form action="/donate" method="post">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <form:form method="post" action="/donate" modelAttribute="donation">
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
+
 
                 <div class="form-group form-group--checkbox">
                     <label>
@@ -79,6 +93,7 @@
                                 name="categories"
                                 value="clothes-to-use"
                         />
+
                         <span class="checkbox"></span>
                         <span class="description"
                         >ubrania, które nadają się do ponownego użycia</span
@@ -134,7 +149,8 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <input type="number" name="bags" step="1" min="1" />
+                        <form:input path="quantity" type="number" name="bags" step="1" min="1" />
+                        <form:errors path="quantity" cssClass="error" />
                     </label>
                 </div>
 
@@ -148,6 +164,7 @@
 
             <!-- STEP 4 -->
             <div data-step="3">
+
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
 
                 <div class="form-group form-group--checkbox">
@@ -192,22 +209,24 @@
                     <div class="form-section--column">
                         <h4>Adres odbioru</h4>
                         <div class="form-group form-group--inline">
-                            <label> Ulica <input type="text" name="address" /> </label>
+                            <label> Ulica <form:input path="street" type="text" name="street" />
+                                <form:errors path="street" cssClass="error" /> </label>
                         </div>
 
                         <div class="form-group form-group--inline">
-                            <label> Miasto <input type="text" name="city" /> </label>
+                            <label> Miasto <form:input path="city" type="text" name="city" />
+                                <form:errors path="city" cssClass="error" /></label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Kod pocztowy <input type="text" name="postcode" />
+                                Kod pocztowy <form:input path="zipCode" type="text" name="zipcode" />
                             </label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Numer telefonu <input type="phone" name="phone" />
+                                Numer telefonu <form:input path="phoneNumber" type="phone" name="phone" />
                             </label>
                         </div>
                     </div>
@@ -287,7 +306,11 @@
                     <button type="submit" class="btn">Potwierdzam</button>
                 </div>
             </div>
-        </form>
+        </form:form>
+
+
+
+
     </div>
 </section>
 
