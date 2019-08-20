@@ -172,30 +172,32 @@
                         <div class="form-group form-group--inline">
                             <label>
                                 Kod pocztowy <form:input path="zipCode" type="text" name="zipcode" />
-                            </label>
+                                <form:errors path="zipCode" cssClass="error" /> </label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
                                 Numer telefonu <form:input path="phoneNumber" type="phone" name="phone" />
-                            </label>
+                                <form:errors path="phoneNumber" cssClass="error" /></label>
                         </div>
                     </div>
 
                     <div class="form-section--column">
                         <h4>Termin odbioru</h4>
                         <div class="form-group form-group--inline">
-                            <label> Data <input type="date" name="data" /> </label>
+                            <label> Data <form:input path="pickUpDate" type="date" name="data" />
+                                <form:errors path="pickUpDate" cssClass="error" /></label>
                         </div>
 
                         <div class="form-group form-group--inline">
-                            <label> Godzina <input type="time" name="time" /> </label>
+                            <label> Godzina <form:input path="pickUpTime" type="time" name="time" />
+                                <form:errors path="pickUpTime" cssClass="error" /></label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
                                 Uwagi dla kuriera
-                                <textarea name="more_info" rows="5"></textarea>
+                                <form:textarea path="pickUpComment" name="more_info" rows="5"></form:textarea>
                             </label>
                         </div>
                     </div>
