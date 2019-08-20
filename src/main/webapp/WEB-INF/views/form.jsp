@@ -145,6 +145,12 @@
                     </c:forEach>
                 </div>
 
+                <div class="form-group form-group--buttons">
+                    <button type="button" class="btn prev-step">Wstecz</button>
+                    <button type="button" class="btn next-step">Dalej</button>
+                </div>
+            </div>
+
 
             <!-- STEP 5 -->
             <div data-step="4">
