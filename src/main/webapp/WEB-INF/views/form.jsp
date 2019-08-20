@@ -81,6 +81,7 @@
 
 
         <form:form method="post" action="/donate" modelAttribute="donation">
+
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
@@ -91,8 +92,6 @@
                                     type="checkbox"
                                     name="categories"
                                     value="${category.id}"
-
-
                             />
                             <span class="checkbox"></span>
                             <span class="description"><c:out value="${category.name}"/></span>
@@ -100,27 +99,6 @@
                         <br>
                     </c:forEach>
                 </div>
-
-<%--                <form:checkboxes items="${skills}" path="skills" />--%>
-
-
-<%--                <div class="form-group form-group--checkbox">--%>
-<%--                    <label>--%>
-<%--                        <input--%>
-<%--                                type="checkbox"--%>
-<%--                                name="categories"--%>
-<%--                                value="clothes-to-use"--%>
-<%--                        />--%>
-
-<%--                        <span class="checkbox"></span>--%>
-<%--                        <span class="description"--%>
-<%--                        >ubrania, które nadają się do ponownego użycia</span--%>
-<%--                        >--%>
-<%--                    </label>--%>
-<%--                </div>--%>
-
-
-
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn next-step">Dalej</button>
                 </div>
@@ -144,46 +122,29 @@
                 </div>
             </div>
 
-
-
             <!-- STEP 4 -->
             <div data-step="3">
-
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
-
                 <div class="form-group form-group--checkbox">
-                    <label>
-                        <input type="radio" name="organization" value="old" />
-                        <span class="checkbox radio"></span>
-                        <span class="description">
-                  <div class="title">Fundacja “Bez domu”</div>
+                    <c:forEach items="${institutions}" var="institution">
+                        <label>
+                            <input
+                                    type="radio"
+                                    name="institution"
+                                    value="${institution.id}"
+                            />
+                            <span class="checkbox radio"></span>
+                            <span class="description">
+                  <div class="title"><c:out value="${institution.name}"/></div>
                   <div class="subtitle">
-                    Cel i misja: Pomoc dla osób nie posiadających miejsca
-                    zamieszkania
+                    Cel i misja: <c:out value="${institution.description}"/>
                   </div>
                 </span>
-                    </label>
+                        </label>
+                        <br>
+                    </c:forEach>
                 </div>
 
-                <div class="form-group form-group--checkbox">
-                    <label>
-                        <input type="radio" name="organization" value="old" />
-                        <span class="checkbox radio"></span>
-                        <span class="description">
-                  <div class="title">Fundacja “Dla dzieci"</div>
-                  <div class="subtitle">
-                    Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji
-                    życiowej.
-                  </div>
-                </span>
-                    </label>
-                </div>
-
-                <div class="form-group form-group--buttons">
-                    <button type="button" class="btn prev-step">Wstecz</button>
-                    <button type="button" class="btn next-step">Dalej</button>
-                </div>
-            </div>
 
             <!-- STEP 5 -->
             <div data-step="4">
