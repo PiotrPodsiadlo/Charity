@@ -68,18 +68,6 @@
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         <form:form method="post" action="/donate" modelAttribute="donation">
 
             <!-- STEP 1: class .active is switching steps -->
@@ -256,7 +244,7 @@
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
-                    <button type="submit" class="btn">Potwierdzam</button>
+                    <input type="submit" id="submitbtn" class="btn">Potwierdzam</input>
                 </div>
             </div>
         </form:form>
@@ -269,6 +257,7 @@
 
 <%@include file="basics/footer.jsp"%>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

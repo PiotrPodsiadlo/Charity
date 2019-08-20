@@ -39,8 +39,10 @@ public class DonationController {
     }
 
     @PostMapping("/donate")
-    public String confirmDonation(@Valid Donation donationDto, BindingResult result, Model model){
-
+    public String confirmDonation(@Valid Donation donation, BindingResult result, Model model){
+        if (result.hasErrors()) {
+            return "form";
+        }
         return "form-confirmation";
     }
 

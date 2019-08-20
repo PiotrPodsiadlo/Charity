@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       // Form submit
-      this.$form.querySelector("form").addEventListener("submit", e => this.submit(e));
+      this.$form.querySelector("#submitbtn").addEventListener("submit", e => this.submit(e));
     }
 
     /**
@@ -164,6 +164,9 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+      const formToJSON = elements => [].reduce.call(elements, (data, element) => { data[element.name] = element.value; return data; }, {});
+      var form = $("form");
+      formToJSON(form);
     }
 
   }
