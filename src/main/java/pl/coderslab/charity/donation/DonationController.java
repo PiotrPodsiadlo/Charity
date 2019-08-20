@@ -34,15 +34,16 @@ public class DonationController {
     public String startDonate(Model model){
         model.addAttribute("categories", categoryService.findAll());
         model.addAttribute("institutions", institutionService.findAllInstitutions());
-        model.addAttribute("donation", new Donation());
+        model.addAttribute("donationDto", new DonationDto());
         return "form";
     }
 
     @PostMapping("/donate")
-    public String confirmDonation(@Valid Donation donation, BindingResult result, Model model){
+    public String confirmDonation(@Valid DonationDto donationDto, BindingResult result, Model model){
         if (result.hasErrors()) {
-            return "form";
+            return "redirect:/donate";
         }
+        donationService.save(donationDto);
         return "form-confirmation";
     }
 

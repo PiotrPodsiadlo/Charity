@@ -68,7 +68,7 @@
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
 
-        <form:form method="post" action="/donate" modelAttribute="donation">
+        <form:form method="post" action="/donate" modelAttribute="donationDto">
 
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
