@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="pl">
 <%@include file="basics/head.jsp" %>
 <body>
 <header class="header--form-page">
@@ -50,13 +53,10 @@
             <p data-step="4">Podaj adres oraz termin odbioru rzeczy.</p>
         </div>
     </div>
-
     <div class="form--steps-container">
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
-
         <form:form method="post" action="/donate" modelAttribute="donationDto" class="form1">
-
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
@@ -78,11 +78,9 @@
                     <button type="button" class="btn next-step">Dalej</button>
                 </div>
             </div>
-
             <!-- STEP 2 -->
             <div data-step="2">
                 <h3>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h3>
-
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
@@ -90,13 +88,11 @@
                         <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>
-
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
                     <button type="button" class="btn next-step">Dalej</button>
                 </div>
             </div>
-
             <!-- STEP 4 -->
             <div data-step="3">
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
@@ -119,18 +115,14 @@
                         <br>
                     </c:forEach>
                 </div>
-
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
                     <button type="button" class="btn next-step">Dalej</button>
                 </div>
             </div>
-
-
             <!-- STEP 5 -->
             <div data-step="4">
                 <h3>Podaj adres oraz termin odbioru rzecz przez kuriera:</h3>
-
                 <div class="form-section form-section--columns">
                     <div class="form-section--column">
                         <h4>Adres odbioru</h4>
@@ -138,37 +130,31 @@
                             <label> Ulica <form:input path="street" type="text" name="street"/>
                                 <form:errors path="street" cssClass="error"/> </label>
                         </div>
-
                         <div class="form-group form-group--inline">
                             <label> Miasto <form:input path="city" type="text" name="city"/>
                                 <form:errors path="city" cssClass="error"/></label>
                         </div>
-
                         <div class="form-group form-group--inline">
                             <label>
                                 Kod pocztowy <form:input path="zipCode" type="text" name="zipcode"/>
                                 <form:errors path="zipCode" cssClass="error"/> </label>
                         </div>
-
                         <div class="form-group form-group--inline">
                             <label>
                                 Numer telefonu <form:input path="phoneNumber" type="phone" name="phone"/>
                                 <form:errors path="phoneNumber" cssClass="error"/></label>
                         </div>
                     </div>
-
                     <div class="form-section--column">
                         <h4>Termin odbioru</h4>
                         <div class="form-group form-group--inline">
                             <label> Data <form:input path="pickUpDate" type="date" name="data"/>
                                 <form:errors path="pickUpDate" cssClass="error"/></label>
                         </div>
-
                         <div class="form-group form-group--inline">
                             <label> Godzina <form:input path="pickUpTime" type="time" name="time"/>
                                 <form:errors path="pickUpTime" cssClass="error"/></label>
                         </div>
-
                         <div class="form-group form-group--inline">
                             <label>
                                 Uwagi dla kuriera
@@ -182,11 +168,9 @@
                     <button type="button" class="btn next-step">Dalej</button>
                 </div>
             </div>
-
             <!-- STEP 6 -->
             <div data-step="5">
                 <h3>Podsumowanie Twojej darowizny</h3>
-
                 <div class="summary">
                     <div class="form-section">
                         <h4>Oddajesz:</h4>
@@ -197,7 +181,6 @@
                                 >4 worki ubrań w dobrym stanie dla dzieci</span
                                 >
                             </li>
-
                             <li>
                                 <span class="icon icon-hand"></span>
                                 <span class="summary--text"
@@ -206,7 +189,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="form-section form-section--columns">
                         <div class="form-section--column">
                             <h4>Adres odbioru:</h4>
@@ -217,7 +199,6 @@
                                 <li>123 456 789</li>
                             </ul>
                         </div>
-
                         <div class="form-section--column">
                             <h4>Termin odbioru:</h4>
                             <ul>

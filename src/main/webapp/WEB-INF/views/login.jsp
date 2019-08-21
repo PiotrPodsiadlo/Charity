@@ -1,3 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="pl">
 <%@include file="basics/head.jsp" %>
 <body>
 <header>

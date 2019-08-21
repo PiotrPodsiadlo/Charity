@@ -13,7 +13,7 @@ public class UserController {
 
     @GetMapping("/register")
     public String startDonate(Model model) {
-
+        model.addAttribute("userDto", new UserDto());
         return "register";
     }
 
