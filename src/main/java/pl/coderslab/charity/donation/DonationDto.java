@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class DonationDto {
 
-    @Min(value=1)
+    @Min(value = 1)
     private int quantity;
     private List<Long> categories;
     @NotNull
@@ -23,7 +23,8 @@ public class DonationDto {
     private String city;
     @NotBlank
     private String zipCode;
-    @DateTimeFormat(pattern = "yyyy-MM-dd") @Future
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Future
     private LocalDate pickUpDate;
     @Future
     private LocalTime pickUpTime;

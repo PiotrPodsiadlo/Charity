@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 public interface DonationRepository extends JpaRepository<Donation, Long> {
 
 
-
-
 }

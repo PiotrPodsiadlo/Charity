@@ -25,9 +25,7 @@ public class DonationService {
     }
 
 
-
-
-    public Integer countAllBags(){
+    public Integer countAllBags() {
         List<Donation> allDonations = donationRepository.findAll();
         int donationCount = allDonations.size();
         Integer overallNumOfBags = allDonations.stream().map(elem -> elem.getQuantity()).reduce(0, Integer::sum);
@@ -35,7 +33,7 @@ public class DonationService {
     }
 
 
-    public void save(DonationDto donationDto){
+    public void save(DonationDto donationDto) {
 
         Donation donation = new Donation();
         donation.setQuantity(donationDto.getQuantity());

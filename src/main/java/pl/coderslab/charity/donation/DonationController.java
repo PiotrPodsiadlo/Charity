@@ -31,7 +31,7 @@ public class DonationController {
 
 
     @GetMapping("/donate")
-    public String startDonate(Model model){
+    public String startDonate(Model model) {
         model.addAttribute("categories", categoryService.findAll());
         model.addAttribute("institutions", institutionService.findAllInstitutions());
         model.addAttribute("donationDto", new DonationDto());
@@ -39,7 +39,7 @@ public class DonationController {
     }
 
     @PostMapping("/donate")
-    public String confirmDonation(@Valid DonationDto donationDto, BindingResult result, Model model){
+    public String confirmDonation(@Valid DonationDto donationDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "redirect:/donate";
         }

@@ -33,5 +33,4 @@ public class Donation {
     private String phoneNumber;
 
 
-
 }

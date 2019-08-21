@@ -1,20 +1,7 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
-
-    <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
-</head>
+<%@include file="basics/head.jsp" %>
 <body>
 <header class="header--main-page">
-    <%@include file="basics/header.jsp"%>
+    <%@include file="basics/header.jsp" %>
 
     <div class="slogan container container--90">
         <div class="slogan--item">
@@ -97,20 +84,22 @@
         <ul class="help--slides-items">
             <c:forEach items="${institutions}" var="institution" varStatus="theOrder" step="2">
                 <li>
-                    <c:forEach items="${institutions}" var="inst" begin="${theOrder.getIndex()}" end="${theOrder.getIndex()}">
+                    <c:forEach items="${institutions}" var="inst" begin="${theOrder.getIndex()}"
+                               end="${theOrder.getIndex()}">
                         <div class="col">
                             <div class="title">Fundacja <c:out value="${inst.name}" default=""/></div>
                             <div class="subtitle">Cel i misja: <c:out value="${inst.description}" default=""/></div>
                         </div>
                     </c:forEach>
-                    <c:forEach items="${institutions}" var="inst" begin="${theOrder.getIndex()+1}" end="${theOrder.getIndex()+1}">
+                    <c:forEach items="${institutions}" var="inst" begin="${theOrder.getIndex()+1}"
+                               end="${theOrder.getIndex()+1}">
                         <div class="col">
                             <div class="title">Fundacja <c:out value="${inst.name}" default=""/></div>
                             <div class="subtitle">Cel i misja: <c:out value="${inst.description}" default=""/></div>
                         </div>
                     </c:forEach>
                 </li>
-        </c:forEach>
+            </c:forEach>
 
 
         </ul>
@@ -118,7 +107,7 @@
 
 </section>
 
-<%@include file="basics/footer.jsp"%>
+<%@include file="basics/footer.jsp" %>
 
 
 </body>

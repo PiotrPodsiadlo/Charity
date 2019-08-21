@@ -1,25 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>" />
-</head>
+<%@include file="basics/head.jsp" %>
 <body>
 <header class="header--form-page">
-    <%@include file="basics/header.jsp"%>
+    <%@include file="basics/header.jsp" %>
 
     <div class="slogan container container--90">
         <div class="slogan--item">
             <h1>
-                Oddaj rzeczy, których już nie chcesz<br />
+                Oddaj rzeczy, których już nie chcesz<br/>
                 <span class="uppercase">potrzebującym</span>
             </h1>
 
@@ -68,7 +55,7 @@
         <div class="form--steps-counter">Krok <span>1</span>/4</div>
 
 
-        <form:form method="post" action="/donate" modelAttribute="donationDto">
+        <form:form method="post" action="/donate" modelAttribute="donationDto" class="form1">
 
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
@@ -99,8 +86,8 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input path="quantity" type="number" name="bags" step="1" min="1" />
-                        <form:errors path="quantity" cssClass="error" />
+                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1"/>
+                        <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>
 
@@ -148,38 +135,38 @@
                     <div class="form-section--column">
                         <h4>Adres odbioru</h4>
                         <div class="form-group form-group--inline">
-                            <label> Ulica <form:input path="street" type="text" name="street" />
-                                <form:errors path="street" cssClass="error" /> </label>
+                            <label> Ulica <form:input path="street" type="text" name="street"/>
+                                <form:errors path="street" cssClass="error"/> </label>
                         </div>
 
                         <div class="form-group form-group--inline">
-                            <label> Miasto <form:input path="city" type="text" name="city" />
-                                <form:errors path="city" cssClass="error" /></label>
-                        </div>
-
-                        <div class="form-group form-group--inline">
-                            <label>
-                                Kod pocztowy <form:input path="zipCode" type="text" name="zipcode" />
-                                <form:errors path="zipCode" cssClass="error" /> </label>
+                            <label> Miasto <form:input path="city" type="text" name="city"/>
+                                <form:errors path="city" cssClass="error"/></label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Numer telefonu <form:input path="phoneNumber" type="phone" name="phone" />
-                                <form:errors path="phoneNumber" cssClass="error" /></label>
+                                Kod pocztowy <form:input path="zipCode" type="text" name="zipcode"/>
+                                <form:errors path="zipCode" cssClass="error"/> </label>
+                        </div>
+
+                        <div class="form-group form-group--inline">
+                            <label>
+                                Numer telefonu <form:input path="phoneNumber" type="phone" name="phone"/>
+                                <form:errors path="phoneNumber" cssClass="error"/></label>
                         </div>
                     </div>
 
                     <div class="form-section--column">
                         <h4>Termin odbioru</h4>
                         <div class="form-group form-group--inline">
-                            <label> Data <form:input path="pickUpDate" type="date" name="data" />
-                                <form:errors path="pickUpDate" cssClass="error" /></label>
+                            <label> Data <form:input path="pickUpDate" type="date" name="data"/>
+                                <form:errors path="pickUpDate" cssClass="error"/></label>
                         </div>
 
                         <div class="form-group form-group--inline">
-                            <label> Godzina <form:input path="pickUpTime" type="time" name="time" />
-                                <form:errors path="pickUpTime" cssClass="error" /></label>
+                            <label> Godzina <form:input path="pickUpTime" type="time" name="time"/>
+                                <form:errors path="pickUpTime" cssClass="error"/></label>
                         </div>
 
                         <div class="form-group form-group--inline">
@@ -250,12 +237,10 @@
         </form:form>
 
 
-
-
     </div>
 </section>
 
-<%@include file="basics/footer.jsp"%>
+<%@include file="basics/footer.jsp" %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/app.js"></script>
