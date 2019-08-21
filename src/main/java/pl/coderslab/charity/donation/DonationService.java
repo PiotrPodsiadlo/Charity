@@ -16,24 +16,22 @@ public class DonationService {
     CategoryRepository categoryRepository;
     InstitutionRepository institutionRepository;
 
+
+    @Autowired
     public DonationService(DonationRepository donationRepository, CategoryRepository categoryRepository, InstitutionRepository institutionRepository) {
         this.donationRepository = donationRepository;
         this.categoryRepository = categoryRepository;
         this.institutionRepository = institutionRepository;
     }
 
-    @Autowired
 
 
-    public Long countAllBags(){
-        Long numberOfDonations = donationRepository.count();
-        Long overallNumOfBags = 0L;
-        for (long i = 0; i < numberOfDonations; i++) {
-            long numberOfBagsInThisDonation  = donationRepository.getOne(i).getQuantity();
-            overallNumOfBags += numberOfBagsInThisDonation;
-        }
+
+    public Integer countAllBags(){
+        List<Donation> allDonations = donationRepository.findAll();
+        int donationCount = allDonations.size();
+        Integer overallNumOfBags = allDonations.stream().map(elem -> elem.getQuantity()).reduce(0, Integer::sum);
         return overallNumOfBags;
-
     }
 
 
