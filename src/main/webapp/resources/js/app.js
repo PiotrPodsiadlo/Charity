@@ -173,12 +173,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         return indexed_array;
-      }
+      }                             // funkcja pobierająca dane z formularza przed wysłaniem
       var form = $("form");
       var formValues = getFormData(form);
       console.log(formValues);
       console.log(formValues.city);
-      $("#citysummary").text(formValues.city);
+      $("#citysummary").text(formValues.city);        // do poszczególnych elementów DOM za pomocą jquery wrzucam pobrane wartości z formularza
     }
 
   }
