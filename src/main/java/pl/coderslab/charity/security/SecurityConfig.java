@@ -1,4 +1,4 @@
-package pl.coderslab.charity.Security;
+package pl.coderslab.charity.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
