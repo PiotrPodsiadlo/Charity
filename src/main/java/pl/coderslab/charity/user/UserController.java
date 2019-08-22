@@ -2,6 +2,8 @@ package pl.coderslab.charity.user;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -31,12 +33,19 @@ public class UserController {
         if (result.hasErrors()) {
             return "register";
         }
-        User existingUser = userService.findFirstByEmail(userDto.getEmail());
-        if (existingUser != null) {
+        User existingUserEmail = userService.findFirstByEmail(userDto.getEmail());
+        if (existingUserEmail != null) {
             result.addError(new FieldError("user",  "email",
                     "Podany e-mail jest już zajęty"));
             return "register";
         }
+        User existingUsername = userService.findFirstByUsername(userDto.getUsername());
+        if (existingUsername != null) {
+            result.addError(new FieldError("user",  "username",
+                    "Podana nazwa uzytkownika jest już zajęta"));
+            return "register";
+        }
+
         if (!userDto.getPassword().equals(password2)) {
             result.addError(new FieldError("user", "password",
                     "Hasła różnią się od siebie"));
@@ -46,10 +55,16 @@ public class UserController {
         return "redirect:/";
     }
 
+//    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+//    public String login() {
+//        return "login";
+//    }
+//
+//    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
+//    @ResponseBody
+//    public String loginSucces(@AuthenticationPrincipal UserDetails customUser) {
+//
+//        return "You are logged as " + customUser;
+//    }
 
-
-    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
-    public String login() {
-        return "login";
-    }
 }

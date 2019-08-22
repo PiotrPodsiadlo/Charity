@@ -21,14 +21,17 @@ public class DonationController {
     private final InstitutionService institutionService;
     private final DonationService donationService;
     private final CategoryService categoryService;
+
     @Autowired
     public DonationController(InstitutionService institutionService, DonationService donationService, CategoryService categoryService) {
         this.institutionService = institutionService;
         this.donationService = donationService;
         this.categoryService = categoryService;
     }
+
     @ModelAttribute("categories")
     public List<Category> getAllCategories(){return categoryService.findAll();}
+
     @ModelAttribute("institutions")
     public List<Institution> getAllInstitutions(){return institutionService.findAllInstitutions();}
 
@@ -42,7 +45,6 @@ public class DonationController {
     @PostMapping("/donate")
     public String confirmDonation(@Valid DonationDto donationDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
-//            return "redirect:/donate"; //zostawiam jako komentarz żeby przetestować z Tomkiem Laciną
             return "form";
         }
         donationService.save(donationDto);

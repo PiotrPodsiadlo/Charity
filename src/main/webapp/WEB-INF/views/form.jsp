@@ -84,7 +84,7 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1"/>
+                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1"/>
                         <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>

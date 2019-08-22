@@ -8,5 +8,6 @@ import pl.coderslab.charity.institution.Institution;
 @Repository
 public interface UserRepository  extends JpaRepository<User, Long> {
 
-    public User findFirstByEmail(String email);
+    User findFirstByEmail(String email);
+    User findFirstByUsername(String username);
 }

@@ -8,12 +8,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class RoleService {
 
-    RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
     @Autowired
     public RoleService(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }
 
-
+    public Role findByName(String name){
+       return roleRepository.findByName(name);
+    }
 }
