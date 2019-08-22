@@ -3,6 +3,7 @@ package pl.coderslab.charity.user;
 import lombok.Data;
 import pl.coderslab.charity.donation.Donation;
 
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Set;
 public class UserDto {
 
     private Long id;
+    @NotBlank
     private String username;
     private String email;
     private String password;

@@ -18,9 +18,9 @@ import javax.validation.Valid;
 public class DonationController {
 
 
-    InstitutionService institutionService;
-    DonationService donationService;
-    CategoryService categoryService;
+    private final InstitutionService institutionService;
+    private final DonationService donationService;
+    private final CategoryService categoryService;
 
     @Autowired
     public DonationController(InstitutionService institutionService, DonationService donationService, CategoryService categoryService) {

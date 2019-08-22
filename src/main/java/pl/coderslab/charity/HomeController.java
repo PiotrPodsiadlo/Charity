@@ -14,9 +14,9 @@ import pl.coderslab.charity.institution.InstitutionService;
 @Controller
 public class HomeController {
 
-    InstitutionService institutionService;
-    DonationService donationService;
-    CategoryService categoryService;
+    private final InstitutionService institutionService;
+    private final DonationService donationService;
+    private final CategoryService categoryService;
 
     @Autowired
     public HomeController(InstitutionService institutionService, DonationService donationService, CategoryService categoryService) {

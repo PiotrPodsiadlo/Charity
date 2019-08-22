@@ -15,7 +15,7 @@ public class DonationDto {
     @Min(value = 1)
     private int quantity;
     private List<Long> categories;
-    @NotNull
+    @NotNull(message="Należy podać jedną organizację")
     private Long institution;
     @NotBlank
     private String street;
@@ -26,7 +26,6 @@ public class DonationDto {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Future
     private LocalDate pickUpDate;
-    @Future
     private LocalTime pickUpTime;
     private String pickUpComment;
     @NotBlank
