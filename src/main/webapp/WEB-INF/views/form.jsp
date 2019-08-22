@@ -163,7 +163,7 @@
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
-                                <form:errors path="*" />
+<%--                                <form:errors path="*" />--%>
                             </label>
                         </div>
                     </div>
