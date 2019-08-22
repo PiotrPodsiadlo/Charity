@@ -161,6 +161,11 @@
                                 <form:textarea path="pickUpComment" name="more_info" rows="5"></form:textarea>
                             </label>
                         </div>
+                        <div class="form-group form-group--inline">
+                            <label>
+                                <form:errors path="*" />
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group form-group--buttons">

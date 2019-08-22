@@ -41,7 +41,10 @@ public class DonationController {
     @PostMapping("/donate")
     public String confirmDonation(@Valid DonationDto donationDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "redirect:/donate";
+//            return "redirect:/donate";
+            model.addAttribute("categories", categoryService.findAll());
+            model.addAttribute("institutions", institutionService.findAllInstitutions());
+            return "form";
         }
         donationService.save(donationDto);
         return "form-confirmation";
