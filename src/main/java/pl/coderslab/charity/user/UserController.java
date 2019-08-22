@@ -55,16 +55,10 @@ public class UserController {
         return "redirect:/";
     }
 
-//    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
-//    public String login() {
-//        return "login";
-//    }
-//
-//    @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
-//    @ResponseBody
-//    public String loginSucces(@AuthenticationPrincipal UserDetails customUser) {
-//
-//        return "You are logged as " + customUser;
-//    }
+    @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
+
 
 }

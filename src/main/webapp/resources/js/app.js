@@ -164,12 +164,21 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
-      const formToJSON = elements => [].reduce.call(elements, (data, element) => { data[element.name] = element.value; return data; }, {});
+      function getFormData($form){
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function(n, i){
+          indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+      }
       var form = $("form");
-      formToJSON(form);
-
-
-
+      var formValues = getFormData(form);
+      console.log(formValues);
+      console.log(formValues.city);
+      $("#citysummary").text(formValues.city);
     }
 
   }

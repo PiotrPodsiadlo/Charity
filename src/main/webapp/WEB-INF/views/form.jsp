@@ -199,7 +199,7 @@
                             <h4>Adres odbioru:</h4>
                             <ul>
                                 <li>Prosta 51</li>
-                                <li>Warszawa</li>
+                                <li id="citysummary">Warszawa</li>
                                 <li>99-098</li>
                                 <li>123 456 789</li>
                             </ul>
@@ -217,7 +217,7 @@
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
-                    <input type="submit" id="submitbtn" class="btn">Potwierdzam</input>
+                    <input type="submit" id="submitbtn" class="btn"></input>
                 </div>
             </div>
         </form:form>
