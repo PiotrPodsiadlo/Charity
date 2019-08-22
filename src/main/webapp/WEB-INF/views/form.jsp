@@ -183,13 +183,13 @@
                             <li>
                                 <span class="icon icon-bag"></span>
                                 <span class="summary--text"
-                                >4 worki ubrań w dobrym stanie dla dzieci</span
+                                ><span id="quantitysummary">4</span> worki</span
                                 >
                             </li>
                             <li>
                                 <span class="icon icon-hand"></span>
                                 <span class="summary--text"
-                                >Dla fundacji "Mam marzenie" w Warszawie</span
+                                >Dla fundacji <span id="institutionsummary">"Mam marzenie" w Warszawie</span></span
                                 >
                             </li>
                         </ul>
@@ -198,18 +198,18 @@
                         <div class="form-section--column">
                             <h4>Adres odbioru:</h4>
                             <ul>
-                                <li>Prosta 51</li>
+                                <li id="addressummary">Prosta 51</li>
                                 <li id="citysummary">Warszawa</li>
-                                <li>99-098</li>
-                                <li>123 456 789</li>
+                                <li id="zipsummary">99-098</li>
+                                <li id="phonesummary">123 456 789</li>
                             </ul>
                         </div>
                         <div class="form-section--column">
                             <h4>Termin odbioru:</h4>
                             <ul>
-                                <li>13/12/2018</li>
-                                <li>15:40</li>
-                                <li>Brak uwag</li>
+                                <li id="datesummary">13/12/2018</li>
+                                <li id="timesummary">15:40</li>
+                                <li id="commentsummary">Brak uwag</li>
                             </ul>
                         </div>
                     </div>
