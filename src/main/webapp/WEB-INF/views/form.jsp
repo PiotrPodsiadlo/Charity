@@ -84,7 +84,7 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1"/>
+                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1"/>
                         <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>
@@ -189,7 +189,7 @@
                             <li>
                                 <span class="icon icon-hand"></span>
                                 <span class="summary--text"
-                                >Dla fundacji <span id="institutionsummary">"Mam marzenie" w Warszawie</span></span
+                                >Dla fundacji <span id="institutionsummary"> </span></span
                                 >
                             </li>
                         </ul>
@@ -198,17 +198,17 @@
                         <div class="form-section--column">
                             <h4>Adres odbioru:</h4>
                             <ul>
-                                <li id="addressummary">Prosta 51</li>
-                                <li id="citysummary">Warszawa</li>
-                                <li id="zipsummary">99-098</li>
-                                <li id="phonesummary">123 456 789</li>
+                                <li id="addressummary"> </li>
+                                <li id="citysummary"> </li>
+                                <li id="zipsummary"> </li>
+                                <li id="phonesummary"> </li>
                             </ul>
                         </div>
                         <div class="form-section--column">
                             <h4>Termin odbioru:</h4>
                             <ul>
-                                <li id="datesummary">13/12/2018</li>
-                                <li id="timesummary">15:40</li>
+                                <li id="datesummary"> </li>
+                                <li id="timesummary"> </li>
                                 <li id="commentsummary">Brak uwag</li>
                             </ul>
                         </div>
