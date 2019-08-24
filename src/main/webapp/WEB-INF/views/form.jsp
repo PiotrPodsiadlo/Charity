@@ -106,7 +106,7 @@
                             />
                             <span class="checkbox radio"></span>
                             <span class="description">
-                  <div class="title"><c:out value="${institution.name}"/></div>
+                  <div class="title" id="institution${institution.id}"><c:out value="${institution.name}"/></div>
                   <div class="subtitle">
                     Cel i misja: <c:out value="${institution.description}"/>
                   </div>

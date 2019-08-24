@@ -176,9 +176,20 @@ document.addEventListener("DOMContentLoaded", function() {
       }                             // funkcja pobierająca dane z formularza przed wysłaniem
       var form = $("form");
       var formValues = getFormData(form);
+      var instName = document.querySelector("#institution"+formValues.institution+"");
+      // console.log(instName);
       console.log(formValues);
-      console.log(formValues.city);
+      $("#quantitysummary").text(formValues.quantity);
+      $("#institutionsummary").text(instName.innerHTML);      // żeby pobrać nazwę instytucji o wybranym id, w formularzu tworze tez customowy id dla pola.
+      $("#addresssummary").text(formValues.address);
       $("#citysummary").text(formValues.city);        // do poszczególnych elementów DOM za pomocą jquery wrzucam pobrane wartości z formularza
+      $("#zipsummary").text(formValues.zipCode);
+      $("#phonesummary").text(formValues.phoneNumber);
+      $("#datesummary").text(formValues.pickUpDate);
+      $("#timesummary").text(formValues.pickUpTime);
+      if(formValues.pickUpComment != "") {
+        $("#commentsummary").text(formValues.pickUpComment);
+      }
     }
 
   }
