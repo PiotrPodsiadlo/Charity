@@ -34,4 +34,6 @@ public class DonationDto {
     @Future
     private LocalDateTime ldt;
 
+
+
 }
