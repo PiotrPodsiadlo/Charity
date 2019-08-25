@@ -190,6 +190,13 @@ document.addEventListener("DOMContentLoaded", function() {
       if(formValues.pickUpComment != "") {
         $("#commentsummary").text(formValues.pickUpComment);
       }
+      const date = formValues.pickUpDate;
+      const time = formValues.pickUpTime;
+
+      const dateTime = formValues.pickUpDate + ' ' + formValues.pickUpTime + '.00';
+      console.log(dateTime);
+      document.getElementById("ldt").setAttribute('value',dateTime);
+      console.log(formValues)
     }
 
   }

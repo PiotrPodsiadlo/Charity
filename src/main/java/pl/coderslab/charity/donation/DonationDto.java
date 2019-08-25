@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -24,12 +25,13 @@ public class DonationDto {
     @NotBlank
     private String zipCode;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Future
+//    @Future
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
     @NotBlank
     private String phoneNumber;
-
+    @Future
+    private LocalDateTime ldt;
 
 }

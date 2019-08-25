@@ -159,11 +159,15 @@
                             <label>
                                 Uwagi dla kuriera
                                 <form:textarea path="pickUpComment" name="more_info" rows="5"></form:textarea>
+
+                                <form:hidden path="ldt" name="ldt" value="" id="ldt" />
+                                <form:errors path="ldt" name="ldt" cssClass="error"/>
+
                             </label>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
-<%--                                <form:errors path="*" />--%>
+                                    <%--                                <form:errors path="*" />--%>
                             </label>
                         </div>
                     </div>
