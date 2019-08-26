@@ -158,7 +158,7 @@
                         <div class="form-group form-group--inline">
                             <label>
                                 Uwagi dla kuriera
-                                <form:textarea path="pickUpComment" name="more_info" rows="5"></form:textarea>
+                                <form:textarea path="pickUpComment" name="more_info" rows="5" type="datetime"></form:textarea>
 
                                 <form:hidden path="ldt" name="ldt" value="" id="ldt" />
                                 <form:errors path="ldt" name="ldt" cssClass="error"/>

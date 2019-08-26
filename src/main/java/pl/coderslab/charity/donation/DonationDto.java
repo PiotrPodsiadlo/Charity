@@ -31,7 +31,7 @@ public class DonationDto {
     private String pickUpComment;
     @NotBlank
     private String phoneNumber;
-    @Future
-    private LocalDateTime ldt;
+    private String ldt;
 
 }
+
