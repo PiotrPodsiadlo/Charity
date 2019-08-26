@@ -175,6 +175,7 @@
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
                     <button type="button" class="btn next-step">Dalej</button>
+                    <form:errors path="dt" cssClass="error"/>
                 </div>
             </div>
             <!-- STEP 6 -->
