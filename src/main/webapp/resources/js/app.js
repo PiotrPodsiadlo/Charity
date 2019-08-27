@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const dateTime = formValues.pickUpDate + ' ' + formValues.pickUpTime+':00.000';
       console.log(dateTime);
-      document.getElementById("ldt").setAttribute('value',dateTime);
+      document.getElementById("dt").setAttribute('value',dateTime);
       console.log(formValues)
     }
 

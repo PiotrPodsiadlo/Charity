@@ -160,8 +160,8 @@
                                 Uwagi dla kuriera
                                 <form:textarea path="pickUpComment" name="more_info" rows="5" type="datetime"></form:textarea>
 
-                                <form:hidden path="ldt" name="ldt" value="" id="ldt" />
-                                <form:errors path="ldt" name="ldt" cssClass="error"/>
+                                <form:hidden path="dt" name="dt" value="" id="dt" />
+                                <form:errors path="dt" name="dt" cssClass="error"/>
 
                             </label>
                         </div>

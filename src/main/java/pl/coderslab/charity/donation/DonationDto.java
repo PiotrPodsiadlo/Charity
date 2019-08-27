@@ -31,7 +31,7 @@ public class DonationDto {
     private String pickUpComment;
     @NotBlank
     private String phoneNumber;
-    private String ldt;
+    private String dt;
 
 
 
