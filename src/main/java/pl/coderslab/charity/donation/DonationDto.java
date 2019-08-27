@@ -33,6 +33,5 @@ public class DonationDto {
     private String phoneNumber;
     private String ldt;
 
-
 }
 
