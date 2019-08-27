@@ -7,10 +7,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-//@Constraint(validatedBy = FutureStringValidator.class)
+@Constraint(validatedBy = FutureStringValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public  @interface RefersToFuture {
-    String message() default "{startWith.error.message}";
+    String message() default "{not a more than 24hrs later date}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {}; }
