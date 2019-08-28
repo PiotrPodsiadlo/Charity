@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public  @interface RefersToFuture {
-    String message() default "{not a more than 24hrs later date}";
+    String message() default "please chose pick up time at least 12 hours from now";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

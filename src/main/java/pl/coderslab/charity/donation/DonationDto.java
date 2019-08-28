@@ -26,7 +26,7 @@ public class DonationDto {
     @NotBlank
     private String zipCode;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Future
+//    @Future
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
