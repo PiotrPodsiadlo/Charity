@@ -11,6 +11,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public  @interface RefersToFuture {
+    int requiredDifferenceInHours();
     String message() default "please chose pick up time at least 12 hours from now";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};

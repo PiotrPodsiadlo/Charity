@@ -9,6 +9,13 @@ import java.time.format.DateTimeFormatter;
 
 public class FutureStringValidator implements ConstraintValidator<RefersToFuture, String> {
 
+    private int requiredTimeDifference;
+
+    @Override
+    public void initialize(RefersToFuture constraintAnnotation) {
+        this.requiredTimeDifference = constraintAnnotation.requiredDifferenceInHours();
+    }
+
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -16,6 +23,6 @@ public class FutureStringValidator implements ConstraintValidator<RefersToFuture
         LocalDateTime dateTimefromString = LocalDateTime.parse(value, formatter);
         Duration duration = Duration.between(now, dateTimefromString);
         long differenceBetweenNowAndPickUptime = duration.toHours();
-        return differenceBetweenNowAndPickUptime > 12;
+        return differenceBetweenNowAndPickUptime > requiredTimeDifference;
     }
 }

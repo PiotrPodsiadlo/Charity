@@ -84,7 +84,7 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1"/>
+                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1" value="1"/>
                         <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>
@@ -149,18 +149,16 @@
                         <h4>Termin odbioru</h4>
                         <div class="form-group form-group--inline">
                             <label> Data <form:input path="pickUpDate" type="date" name="data"/>
-                                <form:errors path="pickUpDate" cssClass="error"/></label>
                         </div>
                         <div class="form-group form-group--inline">
                             <label> Godzina <form:input path="pickUpTime" type="time" name="time"/>
-                                <form:errors path="pickUpTime" cssClass="error"/></label>
-                                                                                                <form:hidden path="dt" name="dt" value="" id="dt" />
-                                                                                                <form:errors path="dt" name="dt" cssClass="error"/>
+                                <form:hidden path="dt" name="dt" value="" id="dt" />
+                                <form:errors path="dt" name="dt" cssClass="error"/>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
                                 Uwagi dla kuriera
-                                <form:textarea path="pickUpComment" name="more_info" rows="5" type="datetime"></form:textarea>
+                                <form:textarea path="pickUpComment" name="more_info" rows="5" ></form:textarea>
                             </label>
                         </div>
                         <div class="form-group form-group--inline">

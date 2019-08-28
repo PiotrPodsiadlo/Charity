@@ -14,25 +14,25 @@ import java.util.List;
 @Data
 public class DonationDto {
 
-    @Min(value = 1)
+    @Min(value = 1, message = "należy wydac co najmniej jeden worek")
     private int quantity;
     private List<Long> categories;
-    @NotNull(message="Należy podać jedną organizację")
+    @NotNull(message="Należy wybrać jedną organizację")
     private Long institution;
     @NotBlank
     private String street;
     @NotBlank
     private String city;
     @NotBlank
+    @Pattern(regexp = "^\\d\\d-\\d\\d\\d$", message = "podaj poprawny kod pocztowy")
     private String zipCode;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-//    @Future
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
     @NotBlank
     private String phoneNumber;
-    @RefersToFuture
+    @RefersToFuture(requiredDifferenceInHours = 12)
     private String dt;
 
 }
