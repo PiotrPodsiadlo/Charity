@@ -154,20 +154,17 @@
                         <div class="form-group form-group--inline">
                             <label> Godzina <form:input path="pickUpTime" type="time" name="time"/>
                                 <form:errors path="pickUpTime" cssClass="error"/></label>
+                                                                                                <form:hidden path="dt" name="dt" value="" id="dt" />
+                                                                                                <form:errors path="dt" name="dt" cssClass="error"/>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
                                 Uwagi dla kuriera
                                 <form:textarea path="pickUpComment" name="more_info" rows="5" type="datetime"></form:textarea>
-
-                                <form:hidden path="dt" name="dt" value="" id="dt" />
-                                <form:errors path="dt" name="dt" cssClass="error"/>
-
                             </label>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
-                                    <%--                                <form:errors path="*" />--%>
                             </label>
                         </div>
                     </div>

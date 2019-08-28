@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const date = formValues.pickUpDate;
       const time = formValues.pickUpTime;
 
-      const dateTime = formValues.pickUpDate + ' ' + formValues.pickUpTime+':00.000';
+      const dateTime = formValues.pickUpDate + ' ' + formValues.pickUpTime;
       console.log(dateTime);
       document.getElementById("dt").setAttribute('value',dateTime);
       console.log(formValues)

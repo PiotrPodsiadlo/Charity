@@ -3,6 +3,7 @@ package pl.coderslab.charity.donation;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
+import pl.coderslab.charity.validator.RefersToFuture;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
@@ -31,6 +32,7 @@ public class DonationDto {
     private String pickUpComment;
     @NotBlank
     private String phoneNumber;
+    @RefersToFuture
     private String dt;
 
 }
