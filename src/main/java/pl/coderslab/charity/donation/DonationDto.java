@@ -32,7 +32,7 @@ public class DonationDto {
     private String pickUpComment;
     @Size(min = 9, max = 13, message = "podaj nr telefonu 9 - 13 cyfr")
     private String phoneNumber;
-    @RefersToFuture(requiredDifferenceInHours = 12)
+    @RefersToFuture(requiredDifferenceInHours = 12, message = "proszę podać datę odbioru za co najmniej 12 godzin od teraz")
     private String dt;
 
 }
