@@ -68,6 +68,7 @@
                                     name="categories"
                                     value="${category.id}"
                             />
+                            <form:errors path="categories" cssClass="error"/>
                             <span class="checkbox"></span>
                             <span class="description"><c:out value="${category.name}"/></span>
                         </label>
@@ -84,7 +85,7 @@
                 <div class="form-group form-group--inline">
                     <label>
                         Liczba 60l worków:
-                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1" value="1"/>
+                        <form:input path="quantity" type="number" name="bags" id="bagsCount" step="1" min="1" value="1"/></br>
                         <form:errors path="quantity" cssClass="error"/>
                     </label>
                 </div>
@@ -127,12 +128,12 @@
                     <div class="form-section--column">
                         <h4>Adres odbioru</h4>
                         <div class="form-group form-group--inline">
-                            <label> Ulica <form:input path="street" type="text" name="street"/>
-                                <form:errors path="street" cssClass="error"/> </label>
+                            <label> Ulica <form:input path="street" type="text" name="street"/></br>
+                            <form:errors path="street" cssClass="error"/> </label>
                         </div>
                         <div class="form-group form-group--inline">
-                            <label> Miasto <form:input path="city" type="text" name="city"/>
-                                <form:errors path="city" cssClass="error"/></label>
+                            <label> Miasto <form:input path="city" type="text" name="city"/></br>
+                            <form:errors path="city" cssClass="error"/></label>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
@@ -141,7 +142,7 @@
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
-                                Numer telefonu <form:input path="phoneNumber" type="phone" name="phone"/>
+                                Numer telefonu <form:input path="phoneNumber" type="phone" name="phone"/></br>
                                 <form:errors path="phoneNumber" cssClass="error"/></label>
                         </div>
                     </div>
@@ -152,8 +153,8 @@
                         </div>
                         <div class="form-group form-group--inline">
                             <label> Godzina <form:input path="pickUpTime" type="time" name="time"/>
-                                <form:hidden path="dt" name="dt" value="" id="dt" />
-                                <form:errors path="dt" name="dt" cssClass="error"/>
+                            <form:hidden path="dt" name="dt" value="" id="dt" /></br>
+                            <form:errors path="dt" cssClass="error"/></label>
                         </div>
                         <div class="form-group form-group--inline">
                             <label>
