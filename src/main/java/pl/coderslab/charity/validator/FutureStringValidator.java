@@ -24,5 +24,6 @@ public class FutureStringValidator implements ConstraintValidator<RefersToFuture
         Duration duration = Duration.between(now, dateTimefromString);
         long differenceBetweenNowAndPickUptime = duration.toHours();
         return differenceBetweenNowAndPickUptime > requiredTimeDifference;
+
     }
 }
