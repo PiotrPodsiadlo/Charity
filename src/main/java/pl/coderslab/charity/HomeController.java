@@ -25,6 +25,7 @@ public class HomeController {
         this.categoryService = categoryService;
     }
 
+
     @RequestMapping("/")
     public String homeAction(Model model) {
         model.addAttribute("institutions", institutionService.findAllInstitutions());
